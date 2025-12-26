@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
   env: {
     BACKEND_AUTH_URL: process.env.BACKEND_AUTH_URL || 'https://api.chavaramatrimony.com/auth/login',
     BACKEND_API_URL: process.env.BACKEND_API_URL || 'https://api.chavaramatrimony.com',
